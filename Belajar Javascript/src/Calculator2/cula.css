@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, #000428, #004e92);
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+input {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    text-align: right;
+    color: #fff;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.operator {
+    background-color: #ff4c4c;
+}
+
+.operator2 {
+    background-color: #444444;
+}
+
+.equalBtn {
+    background-color: #ff8c00;
+    grid-column: span 4;
+}
+
+button:active {
+    transform: scale(0.95);
+}
